@@ -1,0 +1,16 @@
+Module/library	          Main use
+random	                Random numbers
+math	                Mathematics
+datetime	            Date/time
+os	                    Operating system/files
+pathlib	                File paths
+csv	                    CSV files
+json	                JSON/API data
+sqlite3	                Database
+re	                    Text patterns
+collections         	Advanced collections
+logging	                Application logs
+requests	            APIs/web requests
+pandas	                CSV/data analysis
+openpyxl	            Excel
+numpy	                Numerical/data science
