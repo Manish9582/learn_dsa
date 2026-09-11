@@ -17,9 +17,11 @@ class Bank:
     
     def getBalance(self):
         return self.__balance;
+    
     def addBalance(self ,amount):
         self.__balance+=amount
         return "Add Amount successfully"
+    
     def Credit(self,amount):
         self.__balance-=amount
         return "credit Amount successfully"
@@ -45,9 +47,8 @@ class BankFunctionLity:
                 AcountNumber,
                 self.account.password
             ])
-            
-        print('create account successfuly');
-        print('Its your acount number',AcountNumber)
+        return "create account successfully";
+    
     def LoginAccount(self,acountNumber ,password):
         with open('bank.csv','r') as file:
             getFile=csv.reader(file);
@@ -64,10 +65,9 @@ class BankFunctionLity:
                 return "Fail";
       
     def DebitAmount(self ,value):
-       result=self.account.addBalance(value);
-       print(result);
+       self.account.addBalance(value);
        totalBalance=self.account.getBalance();
-       print('Total Balance',totalBalance);
+       return totalBalance; 
      
     def CreditAmount(self ,value):
        result=self.account.Credit(value);
@@ -115,15 +115,27 @@ print('Your want to delete account if as so press 5');
 choose=input('Chooose your option : ')
 if(type(int(choose))!=int):
     print('Enter only number')
-  
-  
- 
-if choose==1:
-    print('Thank for give you interst in apne bank');
-    name=input('Enter the name');
-    age=input('Enter the age');
-    phone=input('Enter the phone');  
-    if phone.len()!=10:
-        print('Please enter the correct phone number')
-    nominee=input('Enter the nominee name');
-    password=input('Enter the password');
+else:
+  data=int(choose)
+  if data == 1:
+      print("Thank you for your interest in Apna Bank")
+
+      name = input("Enter the name: ")
+      age = input("Enter the age: ")
+      phone = input("Enter the phone: ")
+
+      if len(phone) != 10 or not phone.isdigit():
+         print("Please enter a correct 10-digit phone number.");
+         exit();          
+      nominee = input("Enter the nominee name: ")
+      password = input("Enter the password: ")
+      obj=BankFunctionLity(name,phone,age,nominee,password);
+      restultCreateAccount=obj.CreatAccount();
+      if restultCreateAccount=="create account successfully":
+          print('You want to add some amount')
+          print('If yes so press type add or not');
+          totalAmount=obj.DebitAmount(10)
+          print('Print total amount',totalAmount);
+          exit();  
+       
+
