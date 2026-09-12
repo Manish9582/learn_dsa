@@ -1,0 +1,31 @@
+1. OOP + Array: Student Result Management System
+Concept: Build a system that stores students and their marks using arrays/lists.
+
+Features
+Add student
+Store marks for multiple subjects
+Calculate:
+Total marks
+Average
+Percentage
+Grade
+Find highest/lowest scorer
+
+
+2. OOP + NumPy: Stock Portfolio Analyzer
+Concept: Build a small investment/stock analysis program using OOP + NumPy arrays.
+
+You don't need real-time stock APIs. Start with manually entered historical prices.
+
+Features
+Create a stock
+Store historical prices in a NumPy array
+Calculate:
+Average price
+Maximum price
+Minimum price
+Daily returns
+Standard deviation
+Compare two stocks
+Calculate portfolio value
+Find the best-performing stock
