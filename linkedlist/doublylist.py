@@ -57,7 +57,22 @@ class doublyList:
             current=current.next
         current.next=ref
         ref.prev=current
-            
+    
+    def deleteIndex(self, data):
+        current = self.head
+        previous = None
+
+        while current is not None:
+            if current.value == data:
+                if previous is None:
+                    self.head = current.next
+                else:
+                    previous.next = current.next
+
+                return
+            previous = current
+            current = current.next
+
         
         
         
@@ -69,6 +84,7 @@ db.AddData('vivek')
 
 db.AddAtStarting('tahir')
 db.AddAtTheEnd('gautam')
+db.deleteIndex('gautam')
 
 lst=db.printAll()
 print(lst)
