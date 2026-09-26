@@ -19,7 +19,6 @@ class doublyList:
         current=self.head;
         while current.next is not None:
             current=current.next
-            current=current.prev
         current.next=ref
         ref.prev=current
     
