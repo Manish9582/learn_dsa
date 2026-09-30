@@ -71,11 +71,12 @@ class Car:
         if self.head is None:
             print('Node is empty');
             
-        #first Node Delete  
+        #if only one node Node Delete  
         if self.head.next==self.head:  
             if self.head==deletevalue:
                 self.next=None;
             return;
+        
         #fisrt node
         if self.head.data==deletevalue:
             frst=self.head;
