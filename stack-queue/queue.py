@@ -9,10 +9,10 @@ class Node:
         print(self.data)
     
     def pop(self):
-        self.data.pop()
+        self.data.pop(0)
     
     def peek(self):
-        return self.data[-1]
+        return self.data[0]
 
 data=Node();
 data.push(10);
